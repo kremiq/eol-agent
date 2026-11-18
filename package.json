@@ -1,0 +1,22 @@
+{
+  "name": "eol-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lifecycle (EoS/EoL) a upgrade-path databáza pre presales/ops AI agentov – Cloudflare Worker + D1 + MCP",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply eol-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply eol-db --remote",
+    "import": "node scripts/import.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261117.1",
+    "typescript": "^5.6.0",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.0.0"
+  }
+}

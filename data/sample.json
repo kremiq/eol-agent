@@ -1,0 +1,62 @@
+{
+  "_comment": "UKÁŽKOVÉ DÁTA – nie sú overené voči vendorom (verified=false). Dátumy a HW stropy pred produkčným použitím nahraď údajmi z oficiálnych EoL stránok a nastav verified=true.",
+  "products": [
+    {
+      "vendor": "Palo Alto Networks", "family": "PA-200 Series", "model": "PA-220", "os": "PAN-OS",
+      "max_os_version": "10.2", "eos_date": "2023-07-31", "eol_date": "2026-07-31", "replacement": "PA-440",
+      "notes": "SAMPLE", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates", "verified": false
+    },
+    {
+      "vendor": "Palo Alto Networks", "family": "PA-3200 Series", "model": "PA-3220", "os": "PAN-OS",
+      "max_os_version": "11.1", "eos_date": "2023-08-31", "eol_date": "2028-08-31", "replacement": "PA-3410",
+      "notes": "SAMPLE", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/hardware-end-of-life-dates", "verified": false
+    },
+    {
+      "vendor": "Palo Alto Networks", "family": "PA-400 Series", "model": "PA-440", "os": "PAN-OS",
+      "notes": "SAMPLE – aktívny model", "source_url": "https://www.paloaltonetworks.com/network-security/next-generation-firewall/pa-400-series", "verified": false
+    },
+    {
+      "vendor": "Palo Alto Networks", "family": "PA-3400 Series", "model": "PA-3410", "os": "PAN-OS",
+      "notes": "SAMPLE – aktívny model", "source_url": "https://www.paloaltonetworks.com/network-security/next-generation-firewall/pa-3400-series", "verified": false
+    },
+    {
+      "vendor": "Fortinet", "family": "FortiGate", "model": "FG-60E", "os": "FortiOS",
+      "max_os_version": "7.2", "eos_date": "2022-12-31", "eol_date": "2027-12-31", "replacement": "FG-60F",
+      "notes": "SAMPLE", "source_url": "https://support.fortinet.com/Information/ProductLifeCycle.aspx", "verified": false
+    },
+    {
+      "vendor": "Fortinet", "family": "FortiGate", "model": "FG-60F", "os": "FortiOS",
+      "replacement": "FG-70G", "notes": "SAMPLE", "source_url": "https://support.fortinet.com/Information/ProductLifeCycle.aspx", "verified": false
+    },
+    {
+      "vendor": "Cisco", "family": "ISR 4000", "model": "ISR4331", "os": "IOS-XE",
+      "eos_date": "2023-11-07", "eol_date": "2028-11-30", "replacement": "C8300-1N1S-6T",
+      "notes": "SAMPLE", "source_url": "https://www.cisco.com/c/en/us/products/routers/4000-series-integrated-services-routers-isr/eos-eol-notice-listing.html", "verified": false
+    },
+    {
+      "vendor": "Juniper", "family": "SRX300 Line", "model": "SRX300", "os": "Junos",
+      "eos_date": "2026-12-31", "eol_date": "2031-12-31", "replacement": "SRX1500",
+      "notes": "SAMPLE – placeholder dátumy", "source_url": "https://support.juniper.net/support/eol/", "verified": false
+    }
+  ],
+  "releases": [
+    { "os": "PAN-OS", "version": "10.1", "eol_date": "2025-08-31", "notes": "SAMPLE", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary", "verified": false },
+    { "os": "PAN-OS", "version": "10.2", "notes": "SAMPLE – doplň EoL", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary", "verified": false },
+    { "os": "PAN-OS", "version": "11.0", "eol_date": "2025-11-17", "notes": "SAMPLE", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary", "verified": false },
+    { "os": "PAN-OS", "version": "11.1", "eol_date": "2027-05-03", "notes": "SAMPLE", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary", "verified": false },
+    { "os": "PAN-OS", "version": "11.2", "notes": "SAMPLE – doplň EoL", "source_url": "https://www.paloaltonetworks.com/services/support/end-of-life-announcements/end-of-life-summary", "verified": false },
+    { "os": "FortiOS", "version": "6.4", "notes": "SAMPLE", "source_url": "https://support.fortinet.com/Information/ProductLifeCycle.aspx", "verified": false },
+    { "os": "FortiOS", "version": "7.0", "notes": "SAMPLE", "source_url": "https://support.fortinet.com/Information/ProductLifeCycle.aspx", "verified": false },
+    { "os": "FortiOS", "version": "7.2", "notes": "SAMPLE", "source_url": "https://support.fortinet.com/Information/ProductLifeCycle.aspx", "verified": false },
+    { "os": "FortiOS", "version": "7.4", "notes": "SAMPLE", "source_url": "https://support.fortinet.com/Information/ProductLifeCycle.aspx", "verified": false }
+  ],
+  "upgrade_edges": [
+    { "os": "PAN-OS", "from_version": "10.1", "to_version": "10.2", "notes": "SAMPLE – sekvenčný upgrade cez každý feature release; stiahni base image cieľového releasu.", "verified": false },
+    { "os": "PAN-OS", "from_version": "10.2", "to_version": "11.0", "notes": "SAMPLE", "verified": false },
+    { "os": "PAN-OS", "from_version": "11.0", "to_version": "11.1", "notes": "SAMPLE", "verified": false },
+    { "os": "PAN-OS", "from_version": "11.1", "to_version": "11.2", "notes": "SAMPLE", "verified": false },
+    { "os": "FortiOS", "from_version": "6.4", "to_version": "7.0", "notes": "SAMPLE – presnú cestu over v Fortinet Upgrade Path Tool.", "verified": false },
+    { "os": "FortiOS", "from_version": "7.0", "to_version": "7.2", "notes": "SAMPLE", "verified": false },
+    { "os": "FortiOS", "from_version": "7.2", "to_version": "7.4", "notes": "SAMPLE", "verified": false }
+  ]
+}
