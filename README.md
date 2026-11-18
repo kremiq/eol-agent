@@ -43,7 +43,7 @@ curl -X POST localhost:8787/mcp -H 'Content-Type: application/json' \
 ## Deploy
 
 ```bash
-npx wrangler d1 create eol-db            # ID vlož do wrangler.jsonc
+# D1 sa vytvorí automaticky pri prvom deployi (Workers Builds: deploy command = npm run deploy)
 npm run db:migrate:remote
 npx wrangler secret put ADMIN_TOKEN
 npx wrangler secret put API_TOKEN        # voliteľné – viď nižšie

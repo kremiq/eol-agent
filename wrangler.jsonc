@@ -8,8 +8,8 @@
     {
       "binding": "DB",
       "database_name": "eol-db",
-      // po `wrangler d1 create eol-db` sem vlož skutočné ID
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      // database_id vynechané – wrangler databázu pri prvom deployi vytvorí (auto-provisioning).
+      // Ak už eol-db existuje, môžeš sem doplniť "database_id": "<id>".
       "migrations_dir": "migrations"
     }
   ]
