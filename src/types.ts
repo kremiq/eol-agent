@@ -2,6 +2,7 @@ export interface Env {
   DB: D1Database;
   API_TOKEN?: string;
   ADMIN_TOKEN?: string;
+  AUTO_SEED?: string; // "false" = do prázdnej DB nenahrávať ukážkové dáta
 }
 
 export type Product = {

@@ -1,6 +1,7 @@
 import { handleMcp } from "./mcp";
 import { TOOL_MAP, TOOLS, ToolError } from "./tools";
 import { importDataset } from "./import";
+import { ensureSchema } from "./schema";
 import type { Env } from "./types";
 
 const CORS = {
@@ -82,6 +83,12 @@ export default {
       return new Response(llmsTxt(url.origin), { headers: { "Content-Type": "text/markdown; charset=utf-8" } });
     }
     if (url.pathname === "/health") return Response.json({ ok: true });
+
+    try {
+      await ensureSchema(env);
+    } catch (e) {
+      return Response.json({ error: `DB init failed: ${(e as Error).message}` }, { status: 500 });
+    }
 
     if (url.pathname === "/admin/import") {
       if (req.method !== "POST") return new Response("Method Not Allowed", { status: 405 });

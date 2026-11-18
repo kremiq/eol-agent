@@ -96,3 +96,6 @@ migrations/       D1 schéma
 - Scrapery / parsery vendor EoL stránok (cron) → automatický import s `verified` po review
 - Cache odpovedí (Cache API / KV) a rate limiting
 - Prepojenie s CVE dátami: „na tejto verzii sú známe kritické CVE → upgrade odporúčaný“
+
+## Samoinicializácia
+Worker pri prvom requeste vytvorí schému (`CREATE TABLE IF NOT EXISTS`) a do prázdnej DB nahrá `data/sample.json`. Na vypnutie auto-seedu nastav premennú `AUTO_SEED=false`. Migrácie cez wrangler fungujú aj naďalej.
